@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { BRAND, NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { LogoIcon } from "@/components/ui/Logo";
+import { LogoWordmark } from "@/components/ui/Logo";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,21 +46,10 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/#inicio"
-          className="group flex items-center gap-3"
+          className="group flex shrink-0 items-center"
           onClick={() => setMenuOpen(false)}
         >
-          <LogoIcon
-            size={40}
-            className="transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="hidden min-w-0 sm:block">
-            <p className="truncate text-xs font-bold leading-tight text-lumeria-white md:text-sm">
-              {BRAND.name}
-            </p>
-            <p className="text-[10px] tracking-wide text-lumeria-gray md:text-xs">
-              {BRAND.tagline}
-            </p>
-          </div>
+          <LogoWordmark className="transition-transform duration-300 group-hover:scale-[1.02]" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
