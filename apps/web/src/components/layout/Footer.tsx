@@ -5,7 +5,7 @@ import { LogoIcon } from "@/components/ui/Logo";
 export function Footer() {
   return (
     <footer className="border-t border-lumeria-sage/10 bg-lumeria-forest">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
           <div className="mb-4 flex items-center gap-3">
             <LogoIcon size={48} />
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-lumeria-sage/10 px-6 py-6 text-center text-xs text-lumeria-gray">
+      <div className="safe-bottom border-t border-lumeria-sage/10 px-4 py-6 text-center text-xs text-lumeria-gray sm:px-6">
         © {new Date().getFullYear()} {BRAND.name}. Todos os direitos
         reservados.
       </div>

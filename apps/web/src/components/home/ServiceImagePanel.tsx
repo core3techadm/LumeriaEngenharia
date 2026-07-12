@@ -86,7 +86,7 @@ export function ServiceImagePanel({
   const imgX = useTransform(springX, [-0.5, 0.5], ["-2.5%", "2.5%"]);
   const imgY = useTransform(springY, [-0.5, 0.5], ["-2.5%", "2.5%"]);
 
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+  function handleMouseMove(e: React.PointerEvent<HTMLDivElement>) {
     const rect = containerRef.current?.getBoundingClientRect();
     if (!rect) return;
     rawX.set((e.clientX - rect.left) / rect.width - 0.5);
@@ -104,7 +104,10 @@ export function ServiceImagePanel({
     <div
       ref={containerRef}
       className="relative h-full w-full overflow-hidden"
-      onMouseMove={handleMouseMove}
+      onPointerMove={(e) => {
+        if (e.pointerType !== "mouse") return;
+        handleMouseMove(e);
+      }}
       onMouseLeave={handleMouseLeave}
     >
       {/* Imagem com parallax */}

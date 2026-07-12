@@ -75,7 +75,10 @@ export function ContactForm({ className }: { className?: string }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={cn("space-y-6 rounded-2xl glass-panel p-8", className)}
+      className={cn(
+        "space-y-5 rounded-2xl glass-panel p-6 sm:space-y-6 sm:p-8",
+        className,
+      )}
     >
       <div>
         <label htmlFor="name" className="mb-2 block text-sm text-lumeria-sage">
@@ -85,9 +88,11 @@ export function ContactForm({ className }: { className?: string }) {
           id="name"
           name="name"
           type="text"
+          autoComplete="name"
+          autoCapitalize="words"
           required
           disabled={state === "loading"}
-          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
+          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-base text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
           placeholder="Seu nome"
         />
       </div>
@@ -99,9 +104,13 @@ export function ContactForm({ className }: { className?: string }) {
           id="email"
           name="email"
           type="email"
+          autoComplete="email"
+          autoCapitalize="off"
+          autoCorrect="off"
+          inputMode="email"
           required
           disabled={state === "loading"}
-          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
+          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-base text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
           placeholder="seu@email.com"
         />
       </div>
@@ -113,8 +122,10 @@ export function ContactForm({ className }: { className?: string }) {
           id="phone"
           name="phone"
           type="tel"
+          autoComplete="tel"
+          inputMode="tel"
           disabled={state === "loading"}
-          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
+          className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-base text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
           placeholder="(48) 99999-9999"
         />
       </div>
@@ -128,7 +139,7 @@ export function ContactForm({ className }: { className?: string }) {
           rows={4}
           required
           disabled={state === "loading"}
-          className="w-full resize-none rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
+          className="w-full resize-none rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-base text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
           placeholder="Conte-nos sobre seu projeto..."
         />
       </div>

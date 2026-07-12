@@ -62,12 +62,17 @@ export function ServicesScroll() {
         <section
           key={service.id}
           id={service.id}
-          className="service-chapter relative min-h-screen py-32"
+          className="service-chapter relative py-20 md:min-h-screen md:py-32"
         >
           <div className="absolute inset-0 radial-glow opacity-50" />
 
-          <div className="chapter-content relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
-            <div className={index % 2 === 1 ? "md:order-2" : ""}>
+          <div className="chapter-content relative mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2 md:gap-12">
+            <div
+              className={cn(
+                "order-2",
+                index % 2 === 1 ? "md:order-2" : "md:order-1",
+              )}
+            >
               <h2
                 className={cn(
                   "text-4xl font-bold md:text-5xl",
@@ -104,7 +109,8 @@ export function ServicesScroll() {
 
             <div
               className={cn(
-                index % 2 === 1 ? "md:order-1" : "",
+                "order-1",
+                index % 2 === 1 ? "md:order-1" : "md:order-2",
               )}
             >
               {"videoId" in service && service.videoId ? (
@@ -122,7 +128,7 @@ export function ServicesScroll() {
         </section>
       ))}
 
-      <section className="py-24 text-center">
+      <section className="px-4 py-16 text-center sm:px-6 md:py-24">
         <p className="text-lumeria-gray">
           Quer ver todas as soluções?{" "}
           <Link href="/servicos" className="text-lumeria-sage hover:underline">

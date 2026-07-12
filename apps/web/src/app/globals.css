@@ -33,10 +33,13 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -44,6 +47,38 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
+  touch-action: manipulation;
+}
+
+/* Trava o scroll do body quando o menu mobile está aberto */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Áreas seguras para notch/home indicator (iOS) */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Altura de viewport estável no iOS Safari: svh ignora a barra de endereço retrátil.
+   Navegadores sem suporte simplesmente ignoram a 2ª declaração e mantêm o fallback em vh. */
+.min-h-screen-safe {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Oculta a barra de rolagem mantendo a rolagem funcional (nav de pills, carrosséis) */
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {
@@ -60,9 +95,17 @@ body {
 }
 
 .glass-panel {
-  background: color-mix(in srgb, var(--lumeria-forest-mid) 60%, transparent);
+  background: color-mix(in srgb, var(--lumeria-forest-mid) 75%, transparent);
   backdrop-filter: blur(12px);
   border: 1px solid color-mix(in srgb, var(--lumeria-sage) 15%, transparent);
+}
+
+/* Blur mais leve em telas pequenas: menos custo de composição durante o scroll */
+@media (max-width: 768px) {
+  .glass-panel {
+    background: color-mix(in srgb, var(--lumeria-forest-mid) 90%, transparent);
+    backdrop-filter: blur(6px);
+  }
 }
 
 .text-gradient-sage {

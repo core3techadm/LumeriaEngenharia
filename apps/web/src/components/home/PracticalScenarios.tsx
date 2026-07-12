@@ -6,25 +6,25 @@ import { Button } from "@/components/ui/Button";
 
 export function PracticalScenarios() {
   return (
-    <section id="pratica" className="relative py-32">
+    <section id="pratica" className="relative py-20 md:py-32">
       <div className="absolute inset-0 radial-glow opacity-30" />
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-10 text-center md:mb-16"
         >
-          <h2 className="text-3xl font-bold md:text-5xl">
+          <h2 className="text-2xl font-bold md:text-5xl">
             {HOME_PRACTICE.title}
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-lumeria-gray">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-lumeria-gray md:mt-6 md:text-lg">
             {HOME_PRACTICE.subtitle}
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {HOME_PRACTICE.scenarios.map((scenario, index) => (
             <motion.article
               key={scenario.title}
@@ -32,7 +32,7 @@ export function PracticalScenarios() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="rounded-2xl glass-panel p-8"
+              className="rounded-2xl glass-panel p-6 md:p-8"
             >
               <h3 className="text-xl font-semibold text-gradient-sage">
                 {scenario.title}

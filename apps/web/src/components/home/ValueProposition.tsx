@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/Button";
 
 export function ValueProposition() {
   return (
-    <section className="relative py-32">
+    <section className="relative py-20 md:py-32">
       <div className="absolute inset-0 radial-glow opacity-40" />
-      <div className="relative mx-auto max-w-4xl px-6 text-center">
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,12 +29,12 @@ export function ValueProposition() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mt-14 space-y-4 text-left md:mx-auto md:max-w-2xl"
+          className="mt-10 space-y-3 text-left md:mx-auto md:mt-14 md:max-w-2xl md:space-y-4"
         >
           {HOME_VALUE.benefits.map((benefit) => (
             <li
               key={benefit}
-              className="flex items-start gap-4 rounded-xl glass-panel p-4 text-lumeria-sage/90"
+              className="flex items-start gap-3 rounded-xl glass-panel p-4 text-sm text-lumeria-sage/90 md:gap-4 md:text-base"
             >
               <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-lumeria-leaf" />
               <span>{benefit}</span>

@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/Button";
 
 export function FinalCta() {
   return (
-    <section className="relative py-32">
+    <section className="relative py-20 md:py-32">
       <div className="absolute inset-0 radial-glow" />
-      <div className="relative mx-auto max-w-4xl px-6 text-center">
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

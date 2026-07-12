@@ -9,9 +9,9 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-32">
+    <section id="faq" className="relative py-20 md:py-32">
       <div className="absolute inset-0 radial-glow opacity-20" />
-      <div className="relative mx-auto max-w-3xl px-6">
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

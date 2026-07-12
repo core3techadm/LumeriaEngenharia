@@ -10,7 +10,7 @@ export function PageHero({ title, subtitle, className }: PageHeroProps) {
   return (
     <section
       className={cn(
-        "relative flex min-h-[50vh] items-end pb-16 pt-32",
+        "relative flex min-h-[45vh] items-end pb-12 pt-28 md:min-h-[50vh] md:pb-16 md:pt-32",
         className,
       )}
     >
