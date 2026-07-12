@@ -64,15 +64,22 @@ export function ServicesCarousel() {
     return () => clearTimeout(resumeTimeoutRef.current);
   }, []);
 
-  // Mantém a pill ativa visível dentro da faixa de navegação rolável
+  // Mantém a pill ativa visível dentro da faixa de navegação rolável (só horizontal)
   useEffect(() => {
     const container = pillsRef.current;
     const activePill = container?.children[active] as HTMLElement | undefined;
-    activePill?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    if (!container || !activePill) return;
+
+    if (container.scrollWidth > container.clientWidth) {
+      const pillLeft = activePill.offsetLeft;
+      const pillWidth = activePill.offsetWidth;
+      const containerWidth = container.clientWidth;
+      const scrollLeft = pillLeft - containerWidth / 2 + pillWidth / 2;
+      container.scrollTo({
+        left: Math.max(0, scrollLeft),
+        behavior: "smooth",
+      });
+    }
   }, [active]);
 
   function handleDragEnd(_: unknown, info: PanInfo) {
