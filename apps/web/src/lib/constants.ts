@@ -46,7 +46,12 @@ export const SERVICES = [
     icon: "🏠",
     features: [
       "Iluminação e climatização",
-      "Áudio e segurança integrados",
+      "Aspiração central",
+      "Monitoramento de consumo de energia",
+      "Home Theater",
+      "Painel de Led",
+      "Sonorização de ambientes",
+      "Segurança interna",
       "Controle centralizado",
     ],
   },
@@ -63,6 +68,7 @@ export const SERVICES = [
       "Qualidade superior de áudio",
       "Experiências imersivas",
       "Diferentes tipos de espaços",
+      "Salas de conferência",
     ],
   },
   {
