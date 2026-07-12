@@ -89,7 +89,7 @@ export const SERVICES = [
   },
   {
     id: "projetos-eletricos",
-    title: "Projetos elétricos",
+    title: "Projetos elétricos Residenciais",
     subtitle: "Segurança e conformidade técnica",
     description:
       "Desenvolvimento de projetos elétricos completos, com foco em segurança, organização, conformidade técnica e excelência na execução.",
@@ -97,7 +97,9 @@ export const SERVICES = [
     accent: "slate",
     icon: "⚡",
     features: [
-      "Projetos elétricos completos",
+      "Projetos elétricos e distribuição de cargas",
+      "Cálculo padrão de entrada",
+      "Projetos de rede cabeada e WI-FI",
       "Segurança e organização",
       "Conformidade técnica",
     ],
@@ -115,6 +117,7 @@ export const SERVICES = [
       "Planejamento e organização",
       "Controle de prazos",
       "Qualidade na entrega",
+      "Mapeamento de custos",
     ],
   },
 ] as const;
