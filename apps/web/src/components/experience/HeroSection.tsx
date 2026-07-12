@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { BRAND } from "@/lib/constants";
+import { HOME_HERO } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 
 const HeroScene = dynamic(
@@ -18,7 +18,10 @@ const HeroScene = dynamic(
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section
+      id="inicio"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+    >
       <HeroScene />
 
       <div className="pointer-events-none absolute inset-0 radial-glow" />
@@ -28,40 +31,33 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-4 text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+          className="mb-6 text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl"
         >
-          <span className="text-gradient-sage">{BRAND.name}</span>
+          {HOME_HERO.headline}
+          <br />
+          <span className="text-gradient-sage">{HOME_HERO.headlineAccent}</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mb-6 text-sm tracking-wide text-lumeria-sage md:text-lg"
-        >
-          {BRAND.tagline}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-lumeria-gray md:text-xl"
         >
-          {BRAND.description}
+          {HOME_HERO.subheadline}
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Button href="/servicos" size="lg">
-            Conheça nossas soluções
+          <Button href={HOME_HERO.ctaPrimary.href} size="lg">
+            {HOME_HERO.ctaPrimary.label}
           </Button>
-          <Button href="/contato" variant="secondary" size="lg">
-            Solicitar orçamento
+          <Button href={HOME_HERO.ctaSecondary.href} variant="secondary" size="lg">
+            {HOME_HERO.ctaSecondary.label}
           </Button>
         </motion.div>
       </div>

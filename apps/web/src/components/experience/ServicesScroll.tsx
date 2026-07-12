@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SERVICES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { YouTubeEmbed } from "@/components/ui/YouTubeEmbed";
+import { ServiceImagePanel } from "@/components/home/ServiceImagePanel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,27 +104,19 @@ export function ServicesScroll() {
 
             <div
               className={cn(
-                "flex aspect-square items-center justify-center rounded-3xl glass-panel",
                 index % 2 === 1 ? "md:order-1" : "",
               )}
             >
-              <div className="text-center">
-                <div
-                  className={cn(
-                    "mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full border border-lumeria-sage/20",
-                    service.accent === "gold" && "bg-lumeria-gold/10",
-                    service.accent === "sage" && "bg-lumeria-sage/10",
-                    service.accent === "mint" && "bg-lumeria-mint/10",
-                    service.accent === "leaf" && "bg-lumeria-leaf/10",
-                    service.accent === "slate" && "bg-lumeria-slate/10",
-                  )}
-                >
-                  <span className="text-3xl">{service.icon}</span>
+              {"videoId" in service && service.videoId ? (
+                <YouTubeEmbed
+                  videoId={service.videoId}
+                  title={service.title}
+                />
+              ) : (
+                <div className="aspect-square overflow-hidden rounded-3xl border border-lumeria-sage/15">
+                  <ServiceImagePanel serviceId={service.id} />
                 </div>
-                <p className="text-sm text-lumeria-gray">
-                  Experiência imersiva em breve
-                </p>
-              </div>
+              )}
             </div>
           </div>
         </section>

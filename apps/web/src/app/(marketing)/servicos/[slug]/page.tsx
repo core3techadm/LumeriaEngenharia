@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { SERVICES } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { YouTubeEmbed } from "@/components/ui/YouTubeEmbed";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -28,11 +29,19 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   if (!service) notFound();
 
+  const videoId = "videoId" in service ? service.videoId : undefined;
+
   return (
     <>
       <PageHero title={service.title} subtitle={service.subtitle} />
 
       <section className="mx-auto max-w-3xl px-6 py-16">
+        {videoId && (
+          <div className="mb-12">
+            <YouTubeEmbed videoId={videoId} title={service.title} />
+          </div>
+        )}
+
         <p className="text-lg leading-relaxed text-lumeria-gray">
           {service.description}
         </p>

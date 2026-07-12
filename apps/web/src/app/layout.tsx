@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     "soluções",
   ],
   icons: {
-    icon: "/favicon.jpg",
-    apple: "/logo/lumeria-icon.jpg",
+    icon: "/logo/lumeria-icon.svg",
+    apple: "/logo/lumeria-icon.svg",
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Inteligência, tecnologia e excelência para seu projeto — energia fotovoltaica, automação, sonorização, iluminação, projetos elétricos e gestão de obras.",
     type: "website",
     locale: "pt_BR",
-    images: ["/logo/lumeria-wordmark.jpeg"],
+    images: ["/logo/lumeria-wordmark.svg"],
   },
 };
 

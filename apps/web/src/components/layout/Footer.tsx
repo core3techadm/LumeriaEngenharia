@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
+import { LogoIcon } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
@@ -8,13 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <Image
-              src="/logo/lumeria-icon.jpg"
-              alt={BRAND.shortName}
-              width={48}
-              height={48}
-              className="rounded-lg"
-            />
+            <LogoIcon size={48} />
             <div>
               <p className="text-sm font-bold leading-tight md:text-base">
                 {BRAND.name}

@@ -1,33 +1,25 @@
-import { HeroSection } from "@/components/experience/HeroSection";
+import { ServicesCarousel } from "@/components/home/ServicesCarousel";
 import { ServicesScroll } from "@/components/experience/ServicesScroll";
 import { SpatialAudioDemo } from "@/components/experience/SpatialAudioDemo";
-import { Button } from "@/components/ui/Button";
+import { ValueProposition } from "@/components/home/ValueProposition";
+import { PracticalScenarios } from "@/components/home/PracticalScenarios";
+import { AudienceSection } from "@/components/home/AudienceSection";
+import { MethodologySection } from "@/components/home/MethodologySection";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FinalCta } from "@/components/home/FinalCta";
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <ServicesCarousel />
+      <ValueProposition />
       <ServicesScroll />
+      <PracticalScenarios />
+      <AudienceSection />
+      <MethodologySection />
       <SpatialAudioDemo />
-
-      <section className="relative py-32">
-        <div className="absolute inset-0 radial-glow" />
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-bold md:text-5xl">
-            Pronto para transformar seu{" "}
-            <span className="text-gradient-sage">ambiente</span>?
-          </h2>
-          <p className="mt-6 text-lg text-lumeria-gray">
-            Da energia solar à gestão de obras — desenvolvemos soluções
-            integradas que evoluem com você.
-          </p>
-          <div className="mt-10">
-            <Button href="/contato" size="lg">
-              Iniciar projeto
-            </Button>
-          </div>
-        </div>
-      </section>
+      <FaqSection />
+      <FinalCta />
     </>
   );
 }

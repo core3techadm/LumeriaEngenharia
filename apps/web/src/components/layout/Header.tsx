@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { LogoIcon } from "@/components/ui/Logo";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,14 +26,8 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="group flex items-center gap-3">
-          <Image
-            src="/logo/lumeria-icon.jpg"
-            alt={BRAND.shortName}
-            width={40}
-            height={40}
-            className="rounded-lg transition-transform duration-300 group-hover:scale-105"
-          />
+        <Link href="/#inicio" className="group flex items-center gap-3">
+          <LogoIcon size={40} className="transition-transform duration-300 group-hover:scale-105" />
           <div className="hidden min-w-0 sm:block">
             <p className="truncate text-xs font-bold leading-tight text-lumeria-white md:text-sm">
               {BRAND.name}

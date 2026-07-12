@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Lumeria">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a3328"/>
+      <stop offset="100%" stop-color="#0f1f14"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#c5dcc0"/>
+      <stop offset="50%" stop-color="#b8d4b0"/>
+      <stop offset="100%" stop-color="#8faf86"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="16" fill="url(#bg)"/>
+  <!-- Folha estilizada com veia em S -->
+  <path
+    d="M18 62 C28 38, 52 32, 72 40 C88 46, 98 54, 102 62 C98 70, 88 78, 72 84 C52 92, 28 86, 18 62 Z"
+    fill="url(#leaf)"
+  />
+  <path
+    d="M24 62 C34 48, 54 44, 72 50 C86 55, 94 60, 96 62 C94 66, 86 71, 72 74 C54 80, 34 76, 24 62 Z"
+    fill="#0f1f14"
+    opacity="0.85"
+  />
+</svg>

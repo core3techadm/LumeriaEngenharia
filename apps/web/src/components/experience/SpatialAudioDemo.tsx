@@ -7,11 +7,15 @@ export function SpatialAudioDemo() {
   const audioContextRef = useRef<AudioContext | null>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
   const [playing, setPlaying] = useState(false);
-  const [supported] = useState(
-    () => typeof window !== "undefined" && "AudioContext" in window,
-  );
+  const [canPlay, setCanPlay] = useState(false);
 
   useEffect(() => {
+    const supported =
+      typeof window !== "undefined" && "AudioContext" in window;
+    setCanPlay(supported);
+    // #region agent log
+    fetch('http://127.0.0.1:7857/ingest/26e2c78a-0e1d-460d-93c3-b3c35e9476b0',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'b94549'},body:JSON.stringify({sessionId:'b94549',runId:'post-fix',location:'SpatialAudioDemo.tsx:useEffect',message:'canPlay set after mount',data:{supported,canPlay:supported},timestamp:Date.now(),hypothesisId:'H-A'})}).catch(()=>{});
+    // #endregion
     return () => cleanupRef.current?.();
   }, []);
 
@@ -23,7 +27,7 @@ export function SpatialAudioDemo() {
   }, []);
 
   const toggleAudio = async () => {
-    if (!supported) return;
+    if (!canPlay) return;
 
     if (playing) {
       stopAudio();
@@ -74,7 +78,9 @@ export function SpatialAudioDemo() {
     setPlaying(true);
   };
 
-  if (!supported) return null;
+  // #region agent log
+  fetch('http://127.0.0.1:7857/ingest/26e2c78a-0e1d-460d-93c3-b3c35e9476b0',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'b94549'},body:JSON.stringify({sessionId:'b94549',runId:'post-fix',location:'SpatialAudioDemo.tsx:render',message:'always rendering section',data:{canPlay,playing},timestamp:Date.now(),hypothesisId:'H-A'})}).catch(()=>{});
+  // #endregion
 
   return (
     <section className="py-24">
@@ -87,7 +93,12 @@ export function SpatialAudioDemo() {
           projetos. Use fones de ouvido para a melhor experiência.
         </p>
         <div className="mt-8">
-          <Button onClick={toggleAudio} variant="secondary" size="lg">
+          <Button
+            onClick={toggleAudio}
+            variant="secondary"
+            size="lg"
+            disabled={!canPlay}
+          >
             {playing ? "Parar demonstração" : "Iniciar demonstração"}
           </Button>
         </div>
