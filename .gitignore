@@ -31,3 +31,4 @@ Thumbs.db
 
 # marketing source (large cdr files)
 Marketing/*.cdr.zip
+.vercel

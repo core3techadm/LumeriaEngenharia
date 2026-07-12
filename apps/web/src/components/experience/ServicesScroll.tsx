@@ -66,12 +66,9 @@ export function ServicesScroll() {
 
           <div className="chapter-content relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
             <div className={index % 2 === 1 ? "md:order-2" : ""}>
-              <span className="font-mono text-sm text-lumeria-gray">
-                {String(index + 1).padStart(2, "0")}
-              </span>
               <h2
                 className={cn(
-                  "mt-2 text-4xl font-bold md:text-5xl",
+                  "text-4xl font-bold md:text-5xl",
                   accentStyles[service.accent as keyof typeof accentStyles],
                 )}
               >
