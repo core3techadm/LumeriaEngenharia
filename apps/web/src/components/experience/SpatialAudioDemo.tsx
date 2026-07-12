@@ -7,10 +7,11 @@ export function SpatialAudioDemo() {
   const audioContextRef = useRef<AudioContext | null>(null);
   const cleanupRef = useRef<(() => void) | null>(null);
   const [playing, setPlaying] = useState(false);
-  const [supported, setSupported] = useState(true);
+  const [supported] = useState(
+    () => typeof window !== "undefined" && "AudioContext" in window,
+  );
 
   useEffect(() => {
-    setSupported(typeof window !== "undefined" && "AudioContext" in window);
     return () => cleanupRef.current?.();
   }, []);
 

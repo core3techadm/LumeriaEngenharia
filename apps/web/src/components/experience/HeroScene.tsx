@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Stars } from "@react-three/drei";
 import * as THREE from "three";
@@ -9,8 +9,8 @@ function LeafParticles({ count = 120 }: { count?: number }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
-  const particles = useMemo(() => {
-    return Array.from({ length: count }, () => ({
+  const [particles] = useState(() =>
+    Array.from({ length: count }, () => ({
       position: [
         (Math.random() - 0.5) * 12,
         (Math.random() - 0.5) * 8,
@@ -19,8 +19,8 @@ function LeafParticles({ count = 120 }: { count?: number }) {
       scale: 0.02 + Math.random() * 0.06,
       speed: 0.2 + Math.random() * 0.8,
       offset: Math.random() * Math.PI * 2,
-    }));
-  }, [count]);
+    })),
+  );
 
   useFrame((state) => {
     if (!meshRef.current) return;

@@ -1,5 +1,7 @@
 # Lumeria
 
+[![CI](https://github.com/core3techadm/LumeriaEngenharia/actions/workflows/ci.yml/badge.svg)](https://github.com/core3techadm/LumeriaEngenharia/actions/workflows/ci.yml)
+
 Site institucional da Lumeria — soluções em energia fotovoltaica, automação residencial, sonorização, iluminação, projetos elétricos e gestão de obras.
 
 ## Stack
