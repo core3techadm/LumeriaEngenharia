@@ -12,7 +12,7 @@ Repositório público para acompanhamento do desenvolvimento:
 |---|---|
 | Código e histórico de alterações | [github.com/core3techadm/LumeriaEngenharia](https://github.com/core3techadm/LumeriaEngenharia) |
 | Status das verificações automáticas | [GitHub Actions](https://github.com/core3techadm/LumeriaEngenharia/actions) |
-| Site publicado (após deploy na Vercel) | _URL será adicionada aqui após o primeiro deploy_ |
+| Site publicado | [lumeria-engenharia.vercel.app](https://lumeria-engenharia.vercel.app) |
 
 **Deploy do site (preview para o cliente):** conecte o repositório na [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/core3techadm/LumeriaEngenharia). Cada atualização na branch `main` gera uma nova versão do site automaticamente.
 

@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+.next
+**/.next
+.turbo
+.git
+Marketing
+*.cdr.zip
+.DS_Store
+Thumbs.db
