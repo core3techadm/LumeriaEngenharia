@@ -84,6 +84,7 @@ export const SERVICES = [
       "Valorização da arquitetura",
       "Conforto visual e estética",
       "Beleza com eficiência",
+      "Ênfase em fachadas e design imobiliário",
     ],
   },
   {
