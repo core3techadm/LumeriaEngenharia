@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
-import { LogoIcon } from "@/components/ui/Logo";
+import { LogoWordmark } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-lumeria-sage/10 bg-lumeria-forest">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
-          <div className="mb-4 flex items-center gap-3">
-            <LogoIcon size={48} />
-            <div>
-              <p className="text-sm font-bold leading-tight md:text-base">
-                {BRAND.name}
-              </p>
-              <p className="text-xs text-lumeria-gray">{BRAND.tagline}</p>
-            </div>
+          <div className="mb-4">
+            <Link href="/#inicio" className="inline-block">
+              <LogoWordmark
+                className="h-16 w-auto sm:h-[4.75rem]"
+                priority={false}
+              />
+            </Link>
+            <p className="mt-3 text-xs text-lumeria-gray">{BRAND.tagline}</p>
           </div>
           <p className="text-sm leading-relaxed text-lumeria-gray">
             {BRAND.description}

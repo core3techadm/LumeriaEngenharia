@@ -1,6 +1,5 @@
 import { ServicesCarousel } from "@/components/home/ServicesCarousel";
 import { ServicesScroll } from "@/components/experience/ServicesScroll";
-import { SpatialAudioDemo } from "@/components/experience/SpatialAudioDemo";
 import { ValueProposition } from "@/components/home/ValueProposition";
 import { PracticalScenarios } from "@/components/home/PracticalScenarios";
 import { AudienceSection } from "@/components/home/AudienceSection";
@@ -17,7 +16,6 @@ export default function HomePage() {
       <PracticalScenarios />
       <AudienceSection />
       <MethodologySection />
-      <SpatialAudioDemo />
       <FaqSection />
       <FinalCta />
     </>
