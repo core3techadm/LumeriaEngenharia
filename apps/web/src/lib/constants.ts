@@ -20,16 +20,19 @@ export const SERVICES = [
   {
     id: "fotovoltaica",
     title: "Energia solar fotovoltaica",
-    subtitle: "Fonte limpa e sustentável",
+    subtitle: "Etapa energia solar",
     description:
-      "Projetos de energia solar que reduzem custos, aumentam a eficiência energética e promovem uma fonte limpa e sustentável para residências e empresas.",
+      "Projetos de energia solar que reduzem custos, aumentam a eficiência energética e promovem uma fonte limpa e sustentável para residências e empresas. Em cada estudo de caso, analisamos seu perfil de consumo e as condições de radiância em seu imóvel, com projeto 3D em softwares específicos de eficiência fotovoltaica. Calculamos o resultado esperado e entregamos equipamentos específicos para atender sua necessidade.",
     href: "/servicos/fotovoltaica",
     accent: "gold",
     icon: "☀️",
     features: [
-      "Redução de custos energéticos",
-      "Eficiência e sustentabilidade",
-      "Residências e empresas",
+      "Estudo de caso: perfil de consumo e radiância no imóvel",
+      "Projeto 3D em software de eficiência fotovoltaica",
+      "Dimensionamento e equipamentos sob medida",
+      "Sistemas ON-GRID",
+      "Sistemas OFF-GRID",
+      "Sistemas híbridos com armazenamento",
     ],
   },
   {
