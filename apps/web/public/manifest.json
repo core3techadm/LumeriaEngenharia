@@ -1,0 +1,24 @@
+{
+  "name": "Lumeria Soluções",
+  "short_name": "Lumeria",
+  "description": "Inteligência, tecnologia e excelência para seu projeto.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1f14",
+  "theme_color": "#0f1f14",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/logo/lumeria-icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo/lumeria-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --lumeria-forest: #0f1f14;
+  --lumeria-forest-mid: #1a3328;
+  --lumeria-sage: #b8d4b0;
+  --lumeria-leaf: #719968;
+  --lumeria-slate: #455a58;
+  --lumeria-gray: #757575;
+  --lumeria-mint: #e8f1ef;
+  --lumeria-white: #f5f7f4;
+  --lumeria-gold: #c8a96e;
+
+  --background: var(--lumeria-forest);
+  --foreground: var(--lumeria-white);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lumeria-forest: var(--lumeria-forest);
+  --color-lumeria-forest-mid: var(--lumeria-forest-mid);
+  --color-lumeria-sage: var(--lumeria-sage);
+  --color-lumeria-leaf: var(--lumeria-leaf);
+  --color-lumeria-slate: var(--lumeria-slate);
+  --color-lumeria-gray: var(--lumeria-gray);
+  --color-lumeria-mint: var(--lumeria-mint);
+  --color-lumeria-white: var(--lumeria-white);
+  --color-lumeria-gold: var(--lumeria-gold);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--lumeria-sage) 40%, transparent);
+  color: var(--lumeria-white);
+}
+
+.radial-glow {
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--lumeria-forest-mid) 80%, transparent) 0%,
+    var(--lumeria-forest) 70%
+  );
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--lumeria-forest-mid) 60%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--lumeria-sage) 15%, transparent);
+}
+
+.text-gradient-sage {
+  background: linear-gradient(135deg, var(--lumeria-sage), var(--lumeria-leaf));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--lumeria-gold), var(--lumeria-sage));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
