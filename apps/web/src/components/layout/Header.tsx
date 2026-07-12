@@ -49,7 +49,7 @@ export function Header() {
           className="group flex shrink-0 items-center"
           onClick={() => setMenuOpen(false)}
         >
-          <LogoWordmark className="transition-transform duration-300 group-hover:scale-[1.02]" />
+          <LogoWordmark className="h-16 w-auto sm:h-[4.75rem] md:h-24 lg:h-28 transition-transform duration-300 group-hover:scale-[1.02]" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

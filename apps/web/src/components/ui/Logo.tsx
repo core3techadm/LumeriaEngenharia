@@ -38,7 +38,7 @@ export function LogoWordmark({
       alt={BRAND.name}
       width={WORDMARK_WIDTH}
       height={WORDMARK_HEIGHT}
-      className={cn("h-9 w-auto object-contain sm:h-10 md:h-12", className)}
+      className={cn("h-11 w-auto object-contain sm:h-12 md:h-14 lg:h-16", className)}
       priority={priority}
     />
   );
