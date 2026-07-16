@@ -126,7 +126,7 @@ export function ContactForm({ className }: { className?: string }) {
           inputMode="tel"
           disabled={state === "loading"}
           className="w-full rounded-xl border border-lumeria-sage/20 bg-lumeria-forest/50 px-4 py-3 text-base text-lumeria-white placeholder:text-lumeria-gray focus:border-lumeria-sage/50 focus:outline-none disabled:opacity-50"
-          placeholder="(48) 99999-9999"
+          placeholder="(14) 99999-9999"
         />
       </div>
       <div>

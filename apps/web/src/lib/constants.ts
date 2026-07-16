@@ -5,8 +5,13 @@ export const BRAND = {
   description:
     "A Lumeria desenvolve projetos pensados para transformar ambientes com inteligência, desempenho e segurança. Da geração de energia à automação, da iluminação à gestão da obra, cada solução é personalizada para entregar mais conforto, valor e funcionalidade.",
   email: "contato@lumeria.com.br",
-  phone: "+55 (48) 0000-0000",
-  city: "Santa Catarina, Brasil",
+  phone: "+55 (14) 98181-1530",
+  whatsappUrl:
+    "https://wa.me/5514981811530?text=" +
+    encodeURIComponent(
+      "Olá! Gostaria de saber mais sobre as soluções da Lumeria.",
+    ),
+  city: "Bauru/SP",
 } as const;
 
 export const NAV_LINKS = [

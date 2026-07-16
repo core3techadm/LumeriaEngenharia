@@ -44,8 +44,24 @@ export function Footer() {
             CONTATO
           </h3>
           <ul className="space-y-2 text-sm text-lumeria-gray">
-            <li>{BRAND.email}</li>
-            <li>{BRAND.phone}</li>
+            <li>
+              <a
+                href={`mailto:${BRAND.email}`}
+                className="transition-colors hover:text-lumeria-sage"
+              >
+                {BRAND.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={BRAND.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-lumeria-sage"
+              >
+                {BRAND.phone}
+              </a>
+            </li>
             <li>{BRAND.city}</li>
           </ul>
         </div>

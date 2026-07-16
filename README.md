@@ -12,7 +12,7 @@ Repositório público para acompanhamento do desenvolvimento:
 |---|---|
 | Código e histórico de alterações | [github.com/core3techadm/LumeriaEngenharia](https://github.com/core3techadm/LumeriaEngenharia) |
 | Status das verificações automáticas | [GitHub Actions](https://github.com/core3techadm/LumeriaEngenharia/actions) |
-| Site publicado | [lumeria-engenharia.vercel.app](https://lumeria-engenharia.vercel.app) |
+| Site publicado | [lumeriasolucoes.com.br](https://lumeriasolucoes.com.br) (DNS pendente) · [preview Vercel](https://lumeria-engenharia.vercel.app) |
 
 **Deploy do site (preview para o cliente):** conecte o repositório na [Vercel](https://vercel.com/new/clone?repository-url=https://github.com/core3techadm/LumeriaEngenharia). Cada atualização na branch `main` gera uma nova versão do site automaticamente.
 
@@ -42,6 +42,17 @@ npm run dev --workspace=web
 ```
 
 Acesse [http://localhost:3000](http://localhost:3000).
+
+### Formulário de contato (e-mail)
+
+O site exibe `contato@lumeria.com.br`. As mensagens do formulário são enviadas via [Resend](https://resend.com) para o Gmail configurado em `CONTACT_EMAIL`.
+
+```bash
+cp apps/web/.env.example apps/web/.env.local
+# Edite CONTACT_EMAIL, RESEND_API_KEY e RESEND_FROM_EMAIL
+```
+
+Na Vercel, defina as mesmas variáveis em **Project → Settings → Environment Variables**.
 
 ## Build
 

@@ -22,13 +22,28 @@ export default function ContatoPage() {
             <h2 className="text-sm font-semibold tracking-wider text-lumeria-sage">
               E-MAIL
             </h2>
-            <p className="mt-2 text-lumeria-white">{BRAND.email}</p>
+            <a
+              href={`mailto:${BRAND.email}`}
+              className="mt-2 block text-lumeria-white transition-colors hover:text-lumeria-sage"
+            >
+              {BRAND.email}
+            </a>
           </div>
           <div>
             <h2 className="text-sm font-semibold tracking-wider text-lumeria-sage">
-              TELEFONE
+              WHATSAPP
             </h2>
-            <p className="mt-2 text-lumeria-white">{BRAND.phone}</p>
+            <a
+              href={BRAND.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 block text-lumeria-white transition-colors hover:text-lumeria-sage"
+            >
+              {BRAND.phone}
+            </a>
+            <p className="mt-1 text-sm text-lumeria-gray">
+              Clique para iniciar uma conversa
+            </p>
           </div>
           <div>
             <h2 className="text-sm font-semibold tracking-wider text-lumeria-sage">
