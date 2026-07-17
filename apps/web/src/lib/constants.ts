@@ -4,7 +4,7 @@ export const BRAND = {
   tagline: "Inteligência, tecnologia e excelência para seu projeto.",
   description:
     "A Lumeria desenvolve projetos pensados para transformar ambientes com inteligência, desempenho e segurança. Da geração de energia à automação, da iluminação à gestão da obra, cada solução é personalizada para entregar mais conforto, valor e funcionalidade.",
-  email: "contato@lumeria.com.br",
+  email: "contato@lumeriasolucoes.com.br",
   phone: "+55 (14) 98181-1530",
   whatsappUrl:
     "https://wa.me/5514981811530?text=" +

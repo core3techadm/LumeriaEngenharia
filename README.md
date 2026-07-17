@@ -45,7 +45,7 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 ### Formulário de contato (e-mail)
 
-O site exibe `contato@lumeria.com.br`. As mensagens do formulário são enviadas via [Resend](https://resend.com) para o Gmail configurado em `CONTACT_EMAIL`.
+O site exibe `contato@lumeriasolucoes.com.br`. As mensagens do formulário são enviadas via [Resend](https://resend.com) para o Gmail configurado em `CONTACT_EMAIL`.
 
 ```bash
 cp apps/web/.env.example apps/web/.env.local
